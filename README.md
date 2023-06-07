@@ -25,12 +25,12 @@ A few warnings:
 
 This function presently only works on unphased .vcf genotypes. Phased genotypes will cause the function to throw an error.
 
-This function only clips ALT alleles with low frequencies from sites. If the frequency of the REF allele falls below the max_allele_frequency, it is replaced in the genotypes by missing data but not clipped. Doing that would conflict with the genomic reference sequence and possibly cause issues in downstream applications like microhaplotyping.
+This function only clips ALT alleles with low frequencies from sites. If the frequency of the REF allele falls below the max allele frequency, it is replaced in the genotypes by missing data but not clipped. Doing that would conflict with the genomic reference sequence and possibly cause issues in downstream applications like microhaplotyping.
 
 While we're talking about this, if your genomic reference comes from the same population as your samples, and the reference allele
 isn't present in the population genotypes, then you probably have a sequencing error in your reference.
 
-Subsequent maf filtering will remove garbage sites after processing, including those that are left monomorphic. Therefore, it is recommended that you set the max_allele_frequency variable no higher than what you are willing to accept as a minor allele frequency for your data.
+Subsequent maf filtering will remove garbage sites after processing, including those that are left monomorphic. Therefore, it is recommended that you set the max allele frequency variable no higher than what you are willing to accept as a minor allele frequency for your data.
 
 So far, this script has been successfully tested on vcf outputs from three SNP callers: FreeBayes, GATK Haplotype caller, and BCFtools, but should work on most vcf files, as long as the genotypes are unphased.
 
