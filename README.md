@@ -1,7 +1,7 @@
 # clip_alleles_from_SNPs
 Noisy alleles can get your SNP filtered from the data. Clip them first. Save the SNP!
 
-This script is for an R function that reads in a .vcf file of genotypes, calculates allele frequencies, identifies low-frequency alleles, and removes the allele from the site without deleting the allele. Genotypes of the low-frequency alleles are replaced with missing data, and a new .vcf is outputed.
+This script is for an R function that reads in a .vcf file, calculates allele frequencies from genotypes, identifies low-frequency alleles, and removes the allele from the SNP or indel without deleting the site. Genotypes of the low-frequency alleles are replaced with missing data, and a new .vcf is outputed.
 
 Imagine you have a trinary SNP with allele frequencies like this...
 
