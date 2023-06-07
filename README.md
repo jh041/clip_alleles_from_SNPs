@@ -34,4 +34,4 @@ Subsequent maf filtering will remove garbage sites after processing, including t
 
 So far, this script has been successfully tested on vcf outputs from three SNP callers: FreeBayes, GATK Haplotype caller, and BCFtools, but should work on most vcf files, as long as the genotypes are unphased.
 
-Also, missing-data filters used afterwards could exclude these loci of interest if max_allele_frequency is set too high.
+Also, missing-data filters used afterwards could exclude these loci of interest if the max allele frequency is set too high.
