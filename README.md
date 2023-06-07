@@ -5,13 +5,13 @@ This script is for an R function that reads in a .vcf file of genotypes, calcula
 
 Imagine you have a trinary SNP with allele frequencies like this...
 
-G:0.8704        C:0.1284        A:0.0012
+G: 0.8704, C: 0.1284, A: 0.0012
 
 This might be an important SNP, but the site won't survive genotyping filtering if you are excluding sites that are non-binary SNPs, or have minor allele frequencies less than 0.01.
 
 However, after allele clipping that same site will pass most filters...
 
-G:0.871291	C:0.128709
+G: 0.871291,	C: 0.128709
 
 The function is written mostly in base R, and only requires the vcfR package to parse the .vcf file.
 
