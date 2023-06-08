@@ -7,9 +7,9 @@ Imagine you have a trinary SNP with allele frequencies like this...
 
 G: 0.8704, C: 0.1284, A: 0.0012
 
-This might be an important SNP, but the site won't survive genotyping filtering if you are excluding sites that are non-binary variants, or have minor allele frequencies less than 0.01.
+This might be an important SNP, but the site won't survive genotype filtering if you are excluding sites that are non-binary variants, or have minor allele frequencies less than 0.01.
 
-However, after allele clipping that same site will be a binary SNP that will pass common minor allele frequency criteria...
+However, after allele clipping that same site will become a binary SNP that will pass common minor allele frequency criteria...
 
 G: 0.871291,	C: 0.128709
 
@@ -21,7 +21,7 @@ Usage is straightforward:
 clip_alleles("input_vcf_file_name.vcf", "output_vcf_file_name.vcf.gz", maximum frequency of noisy alleles, e.g. 0.01)
 ```
 
-A few warnings:
+A few considerations:
 
 This function presently only works on unphased .vcf genotypes. Phased genotypes will cause the function to throw an error.
 
